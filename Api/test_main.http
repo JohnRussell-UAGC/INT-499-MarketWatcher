@@ -1,0 +1,11 @@
+﻿# Test your FastAPI endpoints
+
+GET http://127.0.0.1:7123/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:7123/hello/User
+Accept: application/json
+
+###
