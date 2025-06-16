@@ -3,12 +3,17 @@
     image: postgres:17
     restart: always
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: app_db
+      POSTGRES_USER: market_watcher
+      POSTGRES_PASSWORD: MarketWatcher123!
+      POSTGRES_DB: market_watcher_db
     ports:
       - "5432:5432"
     volumes:
-      - db_data:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
+networks:
+  app-network:
+    driver: bridge
+
 volumes:
-  db_data:
+  postgres-data:
+    driver: local
